@@ -38,15 +38,16 @@ const AvailableMeals =() => {
         return <MealItem 
           meal={meal} 
           key={meal.id} 
+          id={meal.id}
           name={meal.name}
           description={meal.description}
           price={meal.price}
-          />})
+          />});
 
 
 
     return (
-        <section className=" bg-[#000000ea] p-[100px] ">
+        <section className=" bg-[#000000ea] max-sm:pt-[40%] max-sm:p-4 md:pt-[20%] md:p-[80px] lg:pt-[10%] lg:p-[100px] ">
             <Card>
                  <ul>{mealsList} </ul>
                  {/* <MealItem /> */}
