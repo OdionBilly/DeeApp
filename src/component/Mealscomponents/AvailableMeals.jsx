@@ -1,6 +1,6 @@
 
 import Card from "../UI/Card"
-import MealItem from '../../component/Meals/MealItem'
+import MealItem from './MealItem'
 
 const DummyMeals = [
     { id: 'm1', 
