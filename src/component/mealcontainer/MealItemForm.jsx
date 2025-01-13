@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import Input from "../UI/input";
+import Input from "../UI/Input";
 // import { useState } from 'react';
 
 const MealItemForm = (props) => {
