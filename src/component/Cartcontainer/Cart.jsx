@@ -1,16 +1,35 @@
 import Modal from "../UI/Modal"
+// import CartItem from "./CartItem"
 import { useContext } from "react"
 import CartContext from "../../store/Cart-context"
+import { CartItem } from "./CartItem";
 
 
-const Cart = ({onClose}) => {
+const Cart = ({onClose,}) => {
+    // console.log(onClose)
 
     const cartCtx = useContext(CartContext);
 
-    const cartItems = 
-    <ul> 
-        {cartCtx.items.map((item) => <li key={item.id}>{item.name}</li>)}
+    // const cartItemremoveItem = (id) => {};
+
+    // const cartItemAddItem = (item) => {};
+
+    const cartItems = ( 
+    <ul className="overflow-y-scroll max-h-[400px]"> 
+        {cartCtx.items.map((item) =>
+        <li key ={item.id}>
+            {/* {item.name}
+            {item.amount} */}
+            <CartItem 
+            key={item.id}
+            name={item.name}
+            price={item.price}
+            amount={item.amount}
+            />
+        </li>
+        )}
     </ul>
+    )
     const TotalAmount = `$${cartCtx.totalAmount.toFixed(2)}`; 
 
     const hasItems = cartCtx.items.length > 0;
@@ -27,8 +46,9 @@ const Cart = ({onClose}) => {
             <div className="flex gap-3  max-sm:px-[100px] md:px-[100px] xl:mx-[380px] ">
                  <button className="px-6 py-2 border-[1px] border-[#802d00] rounded-[20px] hover:bg-[#802d00] hover:text-[white]" onClick={onClose}>close</button>
                 {hasItems && <button className="px-6 py-2 bg-[#802d00] rounded-[20px] text-[#fff]">Order</button>}
-            </div>      
+            </div>
         </div>
+
     </Modal> 
         )
     
