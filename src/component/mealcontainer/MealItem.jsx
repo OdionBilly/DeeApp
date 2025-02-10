@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useContext } from 'react';
 import MealItemForm from './MealItemForm';
 // import cartContext from '../../context/Cart-context'
-import CartContext from '../../context/Cart-context';
+import CartContext from '../../store/Cart-context';
 
 const MealItem = (props) => {
     const cartCtx = useContext(CartContext)

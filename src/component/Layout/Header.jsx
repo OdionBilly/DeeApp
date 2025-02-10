@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { FiShoppingCart } from "react-icons/fi";
 import PropTypes from 'prop-types';
 import mealsimage from '../../assets/meals.jpg'
-import CartContext from "../../context/Cart-context";
+import CartContext from "../../store/Cart-context";
 // import CartButton from "./CartButton"
 
 const Header = ({onShowCart}) => {
@@ -15,7 +15,7 @@ const Header = ({onShowCart}) => {
 
     }, 0)
 
-    // console.log(CartContext);
+    // console.log(cartCtx);
 
 
   
