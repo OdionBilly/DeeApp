@@ -10,9 +10,13 @@ const Cart = ({onClose,}) => {
 
     const cartCtx = useContext(CartContext);
 
-    // const cartItemremoveItem = (id) => {};
+    const cartItemRemoveItem = (id) => {
+        cartCtx.removeItem(id);
+    };
 
-    // const cartItemAddItem = (item) => {};
+    const cartItemAddItem = (item) => {
+        cartCtx.addItem(item); 
+    };
 
     const cartItems = ( 
     <ul className="overflow-y-scroll max-h-[400px]"> 
@@ -25,6 +29,8 @@ const Cart = ({onClose,}) => {
             name={item.name}
             price={item.price}
             amount={item.amount}
+            onRemove={cartItemRemoveItem.bind(null, item.id)}
+            onAdd={cartItemAddItem.bind(null, item)}
             />
         </li>
         )}

@@ -4,7 +4,7 @@
 export const CartItem = (cartItems) => {
     const price = `$${cartItems.price.toFixed(2)}`;
 
-    console.log(cartItems);
+    // console.log(cartItems);
 
 
   return (
