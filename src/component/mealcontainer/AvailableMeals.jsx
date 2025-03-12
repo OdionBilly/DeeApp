@@ -6,30 +6,40 @@ const DummyMeals = [
     { id: 'm1', 
         name: 'Sushi', 
         description: 'Finest fish and veggies', 
-        price: 22.99 },
+        price: 22.99,
+        image: '/src/assets/meals-img/sushi.jpg'
+    },
     { id: 'm2', 
         name:'Schnitzel', 
         description: 'A german specialty!', 
-        price: 16.5 },
+        price: 16.5,
+        image: '/src/assets/meals-img/schnitzel.jpg'
+    },
     { id: 'm3', 
         name: 'Barbecue Burger', 
         description: 'American, raw, meaty', 
-        price: 12.99 },
+        price: 12.99,
+        image: '/src/assets/meals-img/ Burger.jpg'
+     },
     { id: 'm4', 
         name: 'Green Bowl', 
         description: 'Healthy...and green...', 
-        price: 18.99 },
+        price: 18.99,
+        image: '/src/assets/meals-img/beanssoup.jpg'
+    },
     {
         id: 'm5',
         name: 'Mediterranean',
         description: 'Healthy...and green...',
-        price: 18.99
+        price: 18.99,
+        image: '/src/assets/meals-img/med.jpg'  
     },
     {
         id: 'm6',
         name: 'Beans soup',
         description: 'Healthy ...and green...',
-        price: 28.99
+        price: 28.99,
+        image: '/src/assets/meals-img/beanssoup.jpg'  
     },
 ] 
 
@@ -40,6 +50,7 @@ const AvailableMeals =() => {
           key={meal.id} 
           id={meal.id}
           name={meal.name}
+          image={meal.image}
           description={meal.description}
           price={meal.price}
           />});

@@ -10,6 +10,7 @@ export const CartItem = (cartItems) => {
   return (
     <li className="">
     <div className="py-5 border-b-2 border-[#802d00]">
+          <div><img src={cartItems.image} alt="" className="w-[80px] rounded-[10px]" /></div>
           <h1>{cartItems.name}</h1>
         <div className="flex justify-between">
            <div className="gap-[70%] flex ">

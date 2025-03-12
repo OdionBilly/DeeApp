@@ -27,6 +27,7 @@ const Cart = ({onClose,}) => {
             <CartItem 
             key={item.id}
             name={item.name}
+            image={item.image}
             price={item.price}
             amount={item.amount}
             onRemove={cartItemRemoveItem.bind(null, item.id)}
